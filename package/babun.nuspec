@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>babun</id>
+    <version>1.0.1</version>
+    <title>Babun Windows Shell</title>
+    <authors>babun</authors>
+    <owners></owners>
+    <projectUrl>http://babun.github.io/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>a linux-like console on a Windows host without a lot of fuzz</description>
+    <summary>a linux-like console on a Windows host without a lot of fuzz</summary>
+    <releaseNotes />
+    <tags>babun cygwin</tags>
+  </metadata>
+</package>
