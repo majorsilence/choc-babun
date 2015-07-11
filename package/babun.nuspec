@@ -8,7 +8,18 @@
     <owners></owners>
     <projectUrl>http://babun.github.io/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>a linux-like console on a Windows host without a lot of fuzz</description>
+    <description>Babun - a windows shell you will love.
+    Babun features the following: Pre-configured Cygwin with a lot of addons,
+        Silent command-line installer, no admin rights required,
+        pact - advanced package manager (like apt-get or yum),
+        xTerm-256 compatible console,
+        HTTP(s) proxying support,
+        Plugin-oriented architecture,
+        Pre-configured git and shell,
+        Integrated oh-my-zsh,
+        Auto update feature,
+        "Open Babun Here" context menu entry.
+    </description>
     <summary>a linux-like console on a Windows host without a lot of fuzz</summary>
     <releaseNotes />
     <tags>babun cygwin</tags>
