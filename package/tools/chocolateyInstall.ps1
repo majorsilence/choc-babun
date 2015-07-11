@@ -3,16 +3,16 @@ $packageName = 'babun'
 function RunBabunInstall($unzipPath)
 {
     $babunpath = Join-Path $env:USERPROFILE ".babun"
-    if (Test-Path $babunpath)
+    $updateBat = Join-Path $babunpath "update.bat"
+    if (Test-Path $updateBat)
     {
-        $updateBat = Join-Path $babunpath "update.bat"
-        start-process $updateBat
+        start-process $updateBat -Wait
     }
     else
     {
-        $setupBat = Join-Path $unzipPath "babun"
-        $setupBat = Join-Path $unzipPath "install.bat"
-        start-process $setupBat
+        $setupBat = Join-Path $unzipPath "babun-1.2.0"
+        $setupBat = Join-Path $setupBat "install.bat"
+        start-process $setupBat -Wait
     }
 }
 

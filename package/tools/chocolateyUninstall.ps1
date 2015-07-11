@@ -6,5 +6,6 @@ $babunpath = Join-Path $env:USERPROFILE ".babun"
 if (Test-Path $babunpath)
 {
     $updateBat = Join-Path $babunpath "uninstall.bat"
-    start-process $updateBat
+    start-process echo Y | $updateBat -Wait
+    Remove-Item -Recurse -Force $babunpath
 }
