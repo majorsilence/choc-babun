@@ -1,20 +1,19 @@
 $packageName = 'babun'
 
-function RemoveOldBabun
-{
-  $babunpath = Join-Path $env:USERPROFILE ".babun"
-  if (Test-Path $babunpath)
-  {
-    Remove-Item -Recurse -Force $babunpath
-  }
-}
-
 function RunBabunInstall($unzipPath)
 {
-    RemoveOldBabun
-    $setupBat = Join-Path $unzipPath "babun"
-    $setupBat = Join-Path $unzipPath "install.bat"
-    start-process $setupBat
+    $babunpath = Join-Path $env:USERPROFILE ".babun"
+    if (Test-Path $babunpath)
+    {
+        $updateBat = Join-Path $babunpath "update.bat"
+        start-process $updateBat
+    }
+    else
+    {
+        $setupBat = Join-Path $unzipPath "babun"
+        $setupBat = Join-Path $unzipPath "install.bat"
+        start-process $setupBat
+    }
 }
 
 $url = 'http://projects.reficio.org/babun/download';
