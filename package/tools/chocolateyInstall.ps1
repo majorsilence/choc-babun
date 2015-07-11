@@ -12,7 +12,7 @@ function RunBabunInstall($unzipPath)
     {
         $setupBat = Join-Path $unzipPath "babun-1.2.0"
         $setupBat = Join-Path $setupBat "install.bat"
-        start-process $setupBat -Wait
+        start-process $setupBat #-Wait
     }
 }
 
