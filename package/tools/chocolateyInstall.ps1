@@ -16,7 +16,7 @@ function RunBabunInstall($unzipPath)
     }
 }
 
-$url = 'http://projects.reficio.org/babun/download';
+$url = 'http://projects.reficio.org/babun/download/babun-1.2.0-dist.zip';
 $unzipPath = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 Install-ChocolateyZipPackage $packageName $url $unzipPath
 RunBabunInstall $unzipPath
