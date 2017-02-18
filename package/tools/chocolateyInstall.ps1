@@ -18,5 +18,6 @@ function RunBabunInstall($unzipPath)
 
 $url = 'http://projects.reficio.org/babun/download/babun-1.2.0-dist.zip';
 $unzipPath = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-Install-ChocolateyZipPackage $packageName $url $unzipPath
+$checksum = '89c0a51ea1d995be5b04b24cd795ba3eba713b293b43991f0c87e29300429b14'
+Install-ChocolateyZipPackage $packageName $url $unzipPath -Checksum $checksum
 RunBabunInstall $unzipPath
